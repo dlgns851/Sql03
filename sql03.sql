@@ -38,11 +38,20 @@ where em.employee_id = de.manager_id
 고려하지 않습니다.) 이름은 first_name과 last_name을 합쳐 출력합니다.
 //2명
 
+
 문제5.
 직원들의 사번(employee_id), 이름(firt_name), 성(last_name)과 부서 이름을 조회하여
 성(last_name)순서로 오름차순 정렬하세요
 //106명
+select em.employee_id,em.first_name,em.last_name
+from employees em , departments de
+where de.DEPARTMENT_ID= em.DEPARTMENT_ID
 
+order by em.last_name;
 문제6.
 자신의 매니저보다 채용일(hire_date)이 빠른 사원의 사번(employee_id), 성(last_name)과
 채용일(hire_date)을 조회하세요
+select em.employee_id, em.last_name,em.hire_date--em2.FIRST_NAME, em2.lsat_name, em2.hire_date
+from employees em, employees em2
+where em.EMPLOYEE_ID= em2.MANAGER_ID and
+   em2.hire_date> em.hire_date ; 
