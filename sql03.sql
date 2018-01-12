@@ -10,7 +10,7 @@ where  em.EMPLOYEE_ID = em2.manager_id
     order by de.department_id;
 문제2.
 지역(regions)에 속한 나라들을 지역이름(region_name), 나라이름(country_name)으로
-출력하되 지역이름, 나라이름 순서대로 내림차순으로 정렬하세요.
+출력하되 지역이름, 나라이름 순서대로 내림차순으로 정렬하세요.ss
 //25개국
 select  region_name,
 	country_name
