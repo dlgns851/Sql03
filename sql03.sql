@@ -37,7 +37,10 @@ where em.employee_id = de.manager_id
 이름을 출력하세요. (현재 ‘Public Accountant’의 직책(job_title)으로 근무하는 사원은
 고려하지 않습니다.) 이름은 first_name과 last_name을 합쳐 출력합니다.
 //2명
-
+select em.EMPLOYEE_ID,em.LAST_NAME, em.HIRE_DATE
+from job_history hi, JOBS jo, employees em
+where jo.job_id=hi.job_id AND job_title like '%Public Accountant%' AND 
+    em.employee_ID=hi.employee_ID;
 
 문제5.
 직원들의 사번(employee_id), 이름(firt_name), 성(last_name)과 부서 이름을 조회하여
